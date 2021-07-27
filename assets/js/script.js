@@ -13,11 +13,11 @@ function fixedNav() {
 
 window.addEventListener('scroll', fixedNav);
 
-window.onload(function(){
-  setTimeout(function() {
-    document.querySelector('.home').classList.toggle('active-section');
-  }, 1000);
-});
+// window.onload(function(){
+//   setTimeout(function() {
+//     document.querySelector('.home').classList.toggle('active-section');
+//   }, 1000);
+// });
 
 
 // --------------menu show--------------------------
