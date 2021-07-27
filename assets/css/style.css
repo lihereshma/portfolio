@@ -195,10 +195,6 @@ header {
 
 .home__container {
   min-height: 100vh;
-  /* row-gap: 2rem; */
-  /* position: absolute;
-  top: 50%;
-  transform: translateY(-50%); */
 }
 
 .home__title {
@@ -215,7 +211,6 @@ header {
 }
 
 .home__scroll {
-  /* padding-bottom: var(--mb-4); */
   align-self: flex-end;  
   text-align: right;
 }
@@ -328,16 +323,11 @@ header {
 .about__img {
   width: 120px;
   height: 120px;
-  /* padding-top: 1rem; */
   border-radius: 50%; 
   display: flex;
   justify-content: center;
   background-color: var(--dark-color);
   overflow: hidden;
-  /* background-image: url(/assets/images/reshma.jpeg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain; */
 }
 
 .about__subtitle {
@@ -403,9 +393,6 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* box-shadow: 1px 1px 5px var(--text-color);
-  border-radius: 5px;
-  padding: 1em; */
   margin-bottom: 2em;
 }
 
@@ -414,23 +401,11 @@ header {
   font-size: .8em;
 }
 
-/* .skills__box li:nth-last-of-type(1),
-.skills__box li:nth-last-of-type(2),
-.skills__box li:nth-last-of-type(3) {
-  margin-bottom: 0;
-} */
-
 @media (min-width: 40em) {
   .skills__box li {
     width: 15%;
     margin-bottom: 4em;
   }
-
-  /* .skills__box li:nth-last-of-type(4),
-  .skills__box li:nth-last-of-type(5),
-  .skills__box li:nth-last-of-type(6) {
-    margin-bottom: 0;
-  } */
 }
 
 .skills__box figure {
@@ -566,7 +541,6 @@ footer a {  transition: all .5s ease; }
 }
 
 footer {
-  /* padding-bottom: var(--mb-3); */
   background-color: var(--dark-color);
 }
 
@@ -643,7 +617,6 @@ footer {
   /* ----- home section ----- */
 
   .home__container {
-    /* height: 100vh; */
     grid-template-rows: 3fr 1fr;
     row-gap: 0;
   }
@@ -667,12 +640,6 @@ footer {
   }
 
   .about__img img { width: 165px; }
-  /* ----- skills section ----- */
-
-  /* .skills__container {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-  } */
   /* ----- projects section ----- */
 
   .projects__container {
@@ -689,12 +656,6 @@ footer {
   }
 
   .contact__form { width: 380px; }
-  /* ----- footer section ----- */
-/* 
-  .footer__container {
-    grid-template-columns: repeat(2, 1fr); */
-    /* justify-items: center;
-  } */
 }  
 
 /*media query for max-width 768px starts here*/
