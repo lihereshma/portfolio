@@ -332,12 +332,12 @@ header {
   border-radius: 50%; 
   display: flex;
   justify-content: center;
-  background-color: var(--first-color);
+  background-color: var(--dark-color);
   overflow: hidden;
-  background-image: url(/assets/images/reshma.jpeg);
+  /* background-image: url(/assets/images/reshma.jpeg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: contain; */
 }
 
 .about__subtitle {
