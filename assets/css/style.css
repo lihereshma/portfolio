@@ -503,35 +503,13 @@ header {
   font-size: var(--normal-font-size);
 }
 
+.contact__container figure {
+  margin: 0;
+}
+
 .contact__text {
   margin-bottom: var(--mb-2);
   display: inline-block;
-}
-
-.contact__inputs {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 1rem;
-}
-
-.contact__input {
-  width: 100%;
-  padding: .8rem;
-  border: 1.5px solid var(--dark-color);
-  border-radius: .5rem;
-  margin-bottom: var(--mb-4);
-  font-size: var(--normal-font-size);
-  outline: none;
-}
-
-::placeholder {
-  font: var(--font-medium) var(--normal-font-size) sans-serif;
-  font-family: 'Poppins', sans-serif;
-}
-
-textarea.contact__input {
-  margin-bottom: 0; 
-  resize: none; 
 }
 
 .contact__container a {
@@ -542,27 +520,15 @@ textarea.contact__input {
   color: var(--dark-color);
 }
 
-.form-group p { 
-  margin-bottom: var(--mb-4);
-  text-align: end; 
+.contact__image {
+  display: none;
 }
 
-.contact__button {
-  padding: .75rem 2.5rem;
-  border: none;
-  border-radius: .5rem;
-  margin-left: auto;
-  display: block;
-  background-color: var(--first-color);
-  color: var(--white-color);
-  cursor: pointer;
-  font-size: var(--normal-font-size);
-  transition: all .5s ease;
-  outline: none;
+@media (min-width: 40em) {
+  .contact__image {
+    display: block;
+  }
 }
-
-.success input, .success textarea { border: 2px solid #5cb85c; }
-.error input, .error textarea { border: 2px solid #ff3333; }
 /*=================================
   contact section styling ends here
 =================================*/ 
@@ -719,6 +685,7 @@ footer {
   .contact__container {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
+    align-items: center;
   }
 
   .contact__form { width: 380px; }
