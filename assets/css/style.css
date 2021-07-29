@@ -15,6 +15,8 @@ body {
   font: var(--font-medium) var(--normal-font-size) sans-serif;
   line-height: 1.6;
   font-family: 'Poppins', sans-serif;
+  width: 100%;
+  overflow: hidden;
 }
 
 h1, h2, p {
@@ -42,10 +44,17 @@ ul {
   list-style-type: none;
 }
 
-.section { padding: 3rem 0; }
+.section { 
+  /* padding: 3rem 0;  */
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 .section-title {
-  margin: var(--mb-4) 0;
+  margin: 0;
+  margin-bottom: 4rem;
   position: relative;
   color: var(--dark-color);
   font-size: var(--h2-font-size);
@@ -107,11 +116,11 @@ header {
   z-index: 2;
 }
 
-.l-header.fixed {
+/* .l-header.fixed {
   position: fixed;
   box-shadow: 5px 5px 19px 0px rgba(0, 0, 0, 0.5);
   background-color: var(--dark-color);
-}
+} */
 
 .bd-grid {
   max-width: 1024px;
@@ -194,7 +203,10 @@ header {
 }
 
 .home__container {
-  min-height: 100vh;
+  /* min-height: calc(100vh - 48px); */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .home__title {
@@ -213,6 +225,7 @@ header {
 .home__scroll {
   align-self: flex-end;  
   text-align: right;
+  margin-top: -1rem;
 }
 
 .home__scroll-link {
@@ -296,6 +309,10 @@ header {
 /*=================================
   about section styling starts here
 =================================*/
+.about { 
+  min-height: 100vh;
+  background-color: var(--white-color);
+}
 .about__img img { 
   width: 100px; 
 } 
@@ -331,6 +348,7 @@ header {
 }
 
 .about__subtitle {
+  margin-top: 0;
   margin-bottom: var(--mb-1);
   color: var(--first-color);
   font-size: var(--h2-font-size);
@@ -371,6 +389,9 @@ header {
 /*=================================
   skills section styling starts here
 =================================*/ 
+.skills {
+  min-height: 100vh;
+}
 .skills__box { 
   transition: all .5s ease; 
   display: flex;
@@ -394,6 +415,11 @@ header {
   align-items: center;
   flex-direction: column;
   margin-bottom: 2em;
+}
+.skills__box li:nth-last-of-type(3),
+.skills__box li:nth-last-of-type(2),
+.skills__box li:nth-last-of-type(1) {
+  margin-bottom: 0;
 }
 
 .skills__box li span {
@@ -470,6 +496,9 @@ header {
 /*=================================
   contact section styling starts here
 =================================*/ 
+.contact {
+  min-height: 100vh;
+}
 .contact__container { row-gap: 2rem; }
 .contact__button:hover { background-color: var(--dark-color) }
 
@@ -606,8 +635,8 @@ footer {
   }
 
   body { margin: 0; }
-  .section { padding-top: 4rem; }
-  .section-title { margin-bottom: 3rem; }
+  /* .section { padding-top: 4rem; } */
+  /* .section-title { margin-bottom: 3rem; } */
 
   .section-title::after {
     width: 64px;
@@ -628,7 +657,6 @@ footer {
   /* ----- about section ----- */
 
   .about__container {
-    padding: 4rem 0;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     text-align: initial;
@@ -640,6 +668,17 @@ footer {
   }
 
   .about__img img { width: 165px; }
+  /* ----- skills section ----- */
+  .skills__container {
+    
+  }
+
+  .skills__box li:nth-last-of-type(6),
+  .skills__box li:nth-last-of-type(5),
+  .skills__box li:nth-last-of-type(4) {
+    margin-bottom: 0;
+  }
+
   /* ----- projects section ----- */
 
   .projects__container {
@@ -680,6 +719,11 @@ footer {
   .bd-grid {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .home__container {
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
