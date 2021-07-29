@@ -584,7 +584,7 @@ header {
   color: var(--dark-color);
 }
 
-.contact__image {
+/* .contact__image {
   display: none;
 }
 
@@ -592,7 +592,7 @@ header {
   .contact__image {
     display: block;
   }
-}
+} */
 /*=================================
   contact section styling ends here
 =================================*/ 
