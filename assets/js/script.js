@@ -18,7 +18,11 @@ $(document).ready(function(){
     document.querySelector('.home').classList.toggle('active-section');
   }, 1000);
 });
-
+$(".home__scroll-link").click(function() {
+  $([document.documentElement, document.body]).animate({
+      scrollTop: $("#about").offset().top
+  });
+});
 
 // --------------menu show--------------------------
 const showMenu = (toogleId, navId) => {

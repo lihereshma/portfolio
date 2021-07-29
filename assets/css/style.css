@@ -239,9 +239,23 @@ header {
 }
 
 .home__scroll-link:before {
+  position: absolute;
+  top: -2em;
+  left: 15%;
+  transform: translateX(-50%);
   content: '\f062';
-  margin: var(--mb-1);
-  font: 900 1rem 'Font Awesome 5 Free'
+  /* margin: var(--mb-1); */
+  font: 900 1rem 'Font Awesome 5 Free';
+  animation: animateBtnArrow 1s infinite linear;
+}
+
+@keyframes animateBtnArrow {
+  0%, 100% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
 }
 
 .home__img {
@@ -450,7 +464,10 @@ header {
 /*=================================
   projects section styling starts here
 =================================*/ 
-.projects { background-color: var(--white-color); }
+.projects { 
+  padding: 4rem 0;
+  background-color: var(--white-color); 
+}
 .projects__img img { 
   border-radius: .5rem;
   min-height: 10em; 
@@ -488,6 +505,49 @@ header {
 .projects__link-name { 
   color: var(--dark-color); 
   text-transform: capitalize;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-category ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+  flex-wrap: wrap;
+}
+
+.projects-category ul li a {
+  border: 1px solid;
+  border-radius: 10px;
+  padding: .5em .8em;
+}
+
+.projects-category ul li {
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-category ul li:not(:last-of-type) {
+  margin-right: 1em;
+}
+
+.projects-category ul li:nth-last-of-type(3) {
+  margin-right: 0;
+}
+
+.selected{
+  background-color: var(--first-color);
+  color: var(--white-color);
+}
+
+.filter-hide{
+  display: none;
 }
 /*=================================
   projects section styling ends here
@@ -669,9 +729,6 @@ footer {
 
   .about__img img { width: 165px; }
   /* ----- skills section ----- */
-  .skills__container {
-    
-  }
 
   .skills__box li:nth-last-of-type(6),
   .skills__box li:nth-last-of-type(5),
@@ -685,6 +742,9 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     column-gap: 2rem;
+  }
+  .projects-category ul li:nth-last-of-type(3) {
+    margin-right: 1em;
   }
   /* ----- contact section ----- */
 
@@ -725,35 +785,4 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
   }
-}
-
-.projects-category ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2em;
-  flex-wrap: wrap;
-}
-
-.projects-category ul li a {
-  border: 1px solid;
-  border-radius: 10px;
-  padding: .5em .8em;
-}
-
-.projects-category ul li {
-  margin-bottom: 1.5em;
-}
-
-.projects-category ul li:not(:last-of-type) {
-  margin-right: 1em;
-}
-
-.selected{
-  background-color: var(--first-color);
-  color: var(--white-color);
-}
-
-.filter-hide{
-  display: none;
 }
