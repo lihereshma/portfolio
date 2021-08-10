@@ -73,7 +73,7 @@ const sr = ScrollReveal({
 sr.reveal('.about__img', { origin: 'left', delay: 300 })
 sr.reveal('.about__content', { origin: 'right', delay: 300 })
 sr.reveal('.skills__box li', { delay: 100, interval: 100 })
-sr.reveal('.contact__info', { origin: 'left', delay: 400 })
+sr.reveal('.contact__info li', { delay: 400 })
 sr.reveal('.contact__image', { origin: 'right', delay: 400 })
 
 $(document).ready(function(){
